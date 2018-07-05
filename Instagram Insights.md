@@ -21,46 +21,46 @@ A User access token with the following permissions:
 
 ##### audience_city
 The cities of the Business Account's followers. Does not include current day's data.
-- lifetime
+*lifetime*
 ##### audience_country
 The countries of the Business Account's followers. Does not include current day's data.
-- lifetime
+*lifetime*
 ##### audience_gender_age
 The gender and age distribution of the Business Account's followers. Does not include current day's data.
-- lifetime
+*lifetime*
 ##### audience_locale
 The locales by country codes of the Business Account's followers. Does not include current day's data.
-- lifetime
+*lifetime*
 ##### email_contacts
 Total number of taps on the email link in the Business Account's profile.
-- day
+*day*
 ##### follower_count
 Total number of unique users following the Business Account.
-- day
+*day*
 ##### get_directions_clicks
 Total number of taps on the directions link in the Business Account's profile.
-- day
+*day*
 ##### impressions
 Total number of times the Business Account's media objects (i.e. posts, stories and promotions) have been viewed. Does not include profile views.
-- day, week, days_28
+*day, week, days_28*
 ##### online_followers
 Total number of the Business Account's followers who were online during the specified period.
-- lifetime
+*lifetime*
 ##### phone_call_clicks
 Total number of taps on the call link in the Business Account's profile.
-- day
+*day*
 ##### profile_views
 Total number of unique users who have viewed the Business Account's profile within the specified period.
-- day
+*day*
 ##### reach
 Total number of unique users who have viewed the Business Account's profile.
-- day, week, days_28
+*day, week, days_28*
 ##### text_message_clicks
 Total number of taps on the text message link in the Business Account's profile.
-- day
+*day*
 ##### website_clicks
 Total number of taps on the website link in the Business Account's profile.
-- day
+*day*
 
 ## Media Insights
 To get insights data for an individual media object, send a GET request to the /media/insights edge and include the metric parameter with one or more of the metric values you want returned. Please note the following limitations:

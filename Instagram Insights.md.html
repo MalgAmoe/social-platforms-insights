@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Insights.md</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="instagram-insights">Instagram Insights</h1>
+<p>Selection of metrics from instagram insights organized by categories.</p>
+<h2 id="user-insights">User Insights</h2>
+<p>Getting Account Insights</p>
+<p>To get insights for an Instagram Business Account, send a GET request to the /user/insights edge and include the metric parameter with one or more metrics, as well as the period parameter and a timeframe (e.g. daily impressions or weekly impressions).</p>
+<pre><code>GET graph.facebook.com
+  /17841405822304914/insights?metric=impressions,reach,profile_views&amp;period=day
+</code></pre>
+<h3 id="permissions">Permissions</h3>
+<p>A User access token with the following permissions:</p>
+<ul>
+<li>instagram_basics</li>
+<li>instagram_manage_insights</li>
+<li>manage_pages</li>
+</ul>
+<h5 id="audience_city">audience_city</h5>
+<p>The cities of the Business Account’s followers. Does not include current day’s data.<br>
+<em>lifetime</em></p>
+<h5 id="audience_country">audience_country</h5>
+<p>The countries of the Business Account’s followers. Does not include current day’s data.<br>
+<em>lifetime</em></p>
+<h5 id="audience_gender_age">audience_gender_age</h5>
+<p>The gender and age distribution of the Business Account’s followers. Does not include current day’s data.<br>
+<em>lifetime</em></p>
+<h5 id="audience_locale">audience_locale</h5>
+<p>The locales by country codes of the Business Account’s followers. Does not include current day’s data.<br>
+<em>lifetime</em></p>
+<h5 id="email_contacts">email_contacts</h5>
+<p>Total number of taps on the email link in the Business Account’s profile.<br>
+<em>day</em></p>
+<h5 id="follower_count">follower_count</h5>
+<p>Total number of unique users following the Business Account.<br>
+<em>day</em></p>
+<h5 id="get_directions_clicks">get_directions_clicks</h5>
+<p>Total number of taps on the directions link in the Business Account’s profile.<br>
+<em>day</em></p>
+<h5 id="impressions">impressions</h5>
+<p>Total number of times the Business Account’s media objects (i.e. posts, stories and promotions) have been viewed. Does not include profile views.<br>
+<em>day, week, days_28</em></p>
+<h5 id="online_followers">online_followers</h5>
+<p>Total number of the Business Account’s followers who were online during the specified period.<br>
+<em>lifetime</em></p>
+<h5 id="phone_call_clicks">phone_call_clicks</h5>
+<p>Total number of taps on the call link in the Business Account’s profile.<br>
+<em>day</em></p>
+<h5 id="profile_views">profile_views</h5>
+<p>Total number of unique users who have viewed the Business Account’s profile within the specified period.<br>
+<em>day</em></p>
+<h5 id="reach">reach</h5>
+<p>Total number of unique users who have viewed the Business Account’s profile.<br>
+<em>day, week, days_28</em></p>
+<h5 id="text_message_clicks">text_message_clicks</h5>
+<p>Total number of taps on the text message link in the Business Account’s profile.<br>
+<em>day</em></p>
+<h5 id="website_clicks">website_clicks</h5>
+<p>Total number of taps on the website link in the Business Account’s profile.<br>
+<em>day</em></p>
+<h2 id="media-insights">Media Insights</h2>
+<p>To get insights data for an individual media object, send a GET request to the /media/insights edge and include the metric parameter with one or more of the metric values you want returned. Please note the following limitations:</p>
+<ul>
+<li>Insights data is not available for media objects within album carousels (children).</li>
+<li>Stories insights are only available for 24 hours, even if the stories are archived or highlighted. If you want to get the latest insights for a story before it expires, set up a Webhook for the Instagram topic and subscribe to the story_insights field.</li>
+</ul>
+<pre><code>GET graph.facebook.com
+  /17895695668004550/insights?metric=impressions,reach
+</code></pre>
+<h3 id="photo--video-metrics">Photo &amp; Video Metrics</h3>
+<h5 id="engagement">engagement</h5>
+<p>likes, comments, and saves</p>
+<h5 id="impressions-1">impressions</h5>
+<h5 id="reach-1">reach</h5>
+<h5 id="saved">saved</h5>
+<h5 id="video_views">video_views</h5>
+<p>videos only</p>
+<h2 id="carousel-album-metrics">Carousel Album Metrics</h2>
+<h5 id="carousel_album_engagement">carousel_album_engagement</h5>
+<h5 id="carousel_album_impressions">carousel_album_impressions</h5>
+<h5 id="carousel_album_reach">carousel_album_reach</h5>
+<h5 id="carousel_album_saved">carousel_album_saved</h5>
+<h5 id="carousel_album_video_views">carousel_album_video_views</h5>
+</div>
+</body>
+
+</html>

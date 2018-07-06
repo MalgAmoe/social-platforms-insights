@@ -246,7 +246,6 @@ Daily total post "love" reactions of a page.
 Daily total post "wow" reactions of a page.
 *day*
 ##### page_actions_post_reactions_haha_total
-haha_total	
 Daily total post "haha" reactions of a page.
 *day*
 ##### page_actions_post_reactions_sorry_total

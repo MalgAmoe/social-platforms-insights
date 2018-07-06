@@ -181,7 +181,7 @@ This dimension identifies the type of page or application where user activity oc
 | Values | Description
 | ------ | ------
 | 0 | The data pertains to activity that occurred on the video's YouTube watch page or in an official YouTube application, such as the YouTube Android app.
-| 1 | The data pertains to activity that occurred on another website or application where the video was embedded using an <iframe> or <object> embed.
+| 1 | The data pertains to activity that occurred on another website or application where the video was embedded using an \<iframe> or \<object> embed.
 | 2 |The data pertains to activity that occurred on a YouTube channel page.
 | 5 | The data pertains to metrics that cannot be classified into one of the other location types listed above.
 | 7 | The data pertains to views that took place on the YouTube home page or home screen, in the user's subscription feed, or in another YouTube browsing feature.

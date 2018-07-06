@@ -1,0 +1,1059 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Youtube Insights.md</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="youtube-insights">Youtube Insights</h1>
+<p>Youtube insights are not served with specific calls, you have to generate queries to get the data you are interested in.<br>
+The data is caracterised by metrics(the measurement like views, likes and dislikes) and dimensions(the criteria to aggregate data, like country or date).<br>
+You can then specify filters to have a limited set of answers.</p>
+<h2 id="metrics">Metrics</h2>
+<h3 id="views-metrics">Views metrics</h3>
+<h5 id="views">views</h5>
+<p>The number of times that a video was viewed. In a playlist report, the metric indicates the number of times that a video was viewed in the context of a playlist.</p>
+<h5 id="red_views">red_views</h5>
+<p>The number of times that a video was viewed by YouTube Red members.</p>
+<h5 id="views_percentage">views_percentage</h5>
+<p>The percentage of viewers who were logged in when watching the video or playlist.</p>
+<h3 id="watch-time-metrics">Watch time metrics</h3>
+<h5 id="watch_time_minutes">watch_time_minutes</h5>
+<p>The number of minutes that users watched videos for the specified channel, content owner, video, or playlist.</p>
+<h5 id="red_watch_time_minutes">red_watch_time_minutes</h5>
+<p>The number of minutes that YouTube Red members watched a video.</p>
+<h5 id="average_view_duration_seconds">average_view_duration_seconds</h5>
+<p>The average length, in seconds, of video playbacks. In a playlist report, the metric indicates the average length, in seconds, of video playbacks that occurred in the context of a playlist.</p>
+<h5 id="average_view_duration_percentage">average_view_duration_percentage</h5>
+<p>The average percentage of a video watched during a video playback.</p>
+<h3 id="engagement-metrics">Engagement metrics</h3>
+<h5 id="comments">comments</h5>
+<p>The number of times that users commented on a video.</p>
+<h5 id="likes">likes</h5>
+<p>The number of times that users indicated that they liked a video by giving it a positive rating.</p>
+<h5 id="dislikes">dislikes</h5>
+<p>The number of times that users indicated that they disliked a video by giving it a negative rating.</p>
+<h5 id="shares">shares</h5>
+<p>The number of times that users shared a video through the Share button.</p>
+<h5 id="subscribers_gained">subscribers_gained</h5>
+<p>The number of times that users subscribed to a channel.</p>
+<h5 id="subscribers_lost">subscribers_lost</h5>
+<p>The number of times that users unsubscribed from a channel.</p>
+<h5 id="videos_added_to_playlists">videos_added_to_playlists</h5>
+<p>The number of times that videos were added to any YouTube playlists. The videos could have been added to the video owner’s playlist or to other channels’ playlists.</p>
+<h5 id="videos_removed_from_playlists">videos_removed_from_playlists</h5>
+<p>The number of times that videos were removed from any YouTube playlists. The videos could have been removed from the video owner’s playlist or from other channels’ playlists.</p>
+<h3 id="playlist-metrics">Playlist metrics</h3>
+<h5 id="playlist_starts">playlist_starts</h5>
+<p>The number of times that viewers initiated playback of a playlist. Note that this metric only includes playlist views that occurred on the web.</p>
+<h5 id="playlist_saves_added">playlist_saves_added</h5>
+<p>(only supported in YouTube Reporting API)<br>
+The number of times that users saved a playlist.</p>
+<h5 id="playlist_saves_removed">playlist_saves_removed</h5>
+<p>(only supported in YouTube Reporting API)<br>
+The number of times that users removed the playlist from their lists of saved playlists.</p>
+<h3 id="annotations-metrics">Annotations metrics</h3>
+<h5 id="annotation_impressions">annotation_impressions</h5>
+<p>The total number of annotation impressions.</p>
+<h5 id="annotation_clickable_impressions">annotation_clickable_impressions</h5>
+<p>The number of annotations that appeared and could be clicked.</p>
+<h5 id="annotation_clicks">annotation_clicks</h5>
+<p>The number of clicked annotations.</p>
+<h5 id="annotation_click_through_rate">annotation_click_through_rate</h5>
+<p>The ratio of annotations that viewers clicked to the total number of clickable annotation impressions.</p>
+<h5 id="annotation_closable_impressions">annotation_closable_impressions</h5>
+<p>The number of annotations that appeared and could be closed.</p>
+<h5 id="annotation_closes">annotation_closes</h5>
+<p>The number of closed annotations.</p>
+<h5 id="annotation_close_rate">annotation_close_rate</h5>
+<p>The ratio of annotations that viewers closed to the total number of annotation impressions.</p>
+<h3 id="card-metrics">Card metrics</h3>
+<h5 id="card_impressions">card_impressions</h5>
+<p>The number of times cards were displayed. When the card panel is opened, a card impression is logged for each of the video’s cards.</p>
+<h5 id="card_clicks">card_clicks</h5>
+<p>The number of times that cards were clicked.</p>
+<h5 id="card_click_rate">card_click_rate</h5>
+<p>The click-through-rate for cards, which is calculated as the ratio of card clicks to card impressions.</p>
+<h5 id="card_teaser_impressions">card_teaser_impressions</h5>
+<p>The number of times that card teasers were displayed. A video view can generate multiple teaser impressions.</p>
+<h5 id="card_teaser_clicks">card_teaser_clicks</h5>
+<p>The number of clicks on card teasers. Card icon clicks are attributed to the last teaser displayed to the user.</p>
+<h5 id="card_teaser_click_rate">card_teaser_click_rate</h5>
+<p>The click-through-rate for card teasers, which is calculated as the ratio of clicks on card teasers to the total number of card teaser impressions.</p>
+<h3 id="end-screen-metrics">End screen metrics</h3>
+<p>End screens are elements that show during the last five to 20 seconds of a video to promote your content, channel, and websites.</p>
+<h5 id="end_screen_element_impressions">end_screen_element_impressions</h5>
+<p>The number of end screen elements that were displayed. One impression is logged for each end screen element that displays.</p>
+<h5 id="end_screen_element_clicks">end_screen_element_clicks</h5>
+<p>The number of times that end screen elements were clicked.</p>
+<h5 id="end_screen_element_click_rate">end_screen_element_click_rate</h5>
+<p>The click-through-rate for end screen elements, which is calculated as the ratio of end screen element clicks to end screen element impressions.</p>
+<h3 id="audience-retention-metrics">Audience retention metrics</h3>
+<h5 id="audience_retention_percentage">audience_retention_percentage</h5>
+<p>The absolute ratio of viewers watching the video at the given point in the video. The ratio is calculated by comparing the number of times a portion of a video has been watched to the total number of views of the video. The elapsed_video_time_percentage dimension identifies the portion of the video to which the metric corresponds.</p>
+<p>Note that a portion of a video could be watched more than once (or not at all) in a given video view. For example, if users rewind and watch the same portion of a video multiple times, then the absolute ratio for that portion of the video the could be greater than 1.</p>
+<p>The following examples illustrate how the value is calculated:</p>
+<ul>
+<li>A one-minute video is watched 100 times. Half of the viewers stop watching after 15 seconds and the rest watch the entire video. None of the viewers watch any parts of the video more than once. In this case, this metric’s value would be 1 for time buckets in the first quarter of the video, and its value would be 0.50 for the remainder of the video.</li>
+<li>A one-minute video is watched 100 times. All of the viewers watch the entire video, but 20 of the viewers watch until the video’s 45-second mark, then skip back to the video’s 30-second mark, and then watch the remainder of the video. In this case, the metric’s value would be 1 for time buckets in either the first half or the last quarter of the video. However, the value would be 1.2 for time buckets in the third quarter of the video since 100 percent of the viewers watched that segment of the video but 20% of those viewers watched the segment twice.</li>
+</ul>
+<h3 id="earnings-metrics">Earnings metrics</h3>
+<h5 id="estimated_partner_revenue">estimated_partner_revenue</h5>
+<p>The total estimated earnings (net revenue) from all Google-sold advertising sources as well as from non-advertising sources for the selected date range and region.</p>
+<h5 id="estimated_partner_ad_revenue">estimated_partner_ad_revenue</h5>
+<p>The total estimated earnings (net revenue) from all Google-sold advertising sources for the selected date range and region.</p>
+<p>Estimated earnings are subject to month-end adjustment and do not include partner-sold and partner-served advertising.</p>
+<h5 id="estimated_partner_ad_auction_revenue">estimated_partner_ad_auction_revenue</h5>
+<p>(only supported in YouTube Reporting API)<br>
+The total estimated earnings (net revenue) from auction-sold advertising via AdSense for the selected date range and region. This metric was previously named estimated_partner_ad_sense_revenue.</p>
+<h5 id="estimated_partner_ad_sense_revenue">estimated_partner_ad_sense_revenue</h5>
+<p>(only supported in YouTube Reporting API)<br>
+The total estimated earnings (net revenue) from auction-sold AdSense advertising for the selected date range and region.</p>
+<h5 id="estimated_partner_ad_reserved_revenue">estimated_partner_ad_reserved_revenue</h5>
+<p>(only supported in YouTube Reporting API)<br>
+The total estimated earnings (net revenue) from reserved-sold advertising via DoubleClick (DCLK) and other YouTube-sold sources. This metric was previously named estimated_partner_double_click_revenue.</p>
+<h5 id="estimated_partner_double_click_revenue">estimated_partner_double_click_revenue</h5>
+<p>(only supported in YouTube Reporting API)<br>
+The total estimated earnings (net revenue) from reserved-sold advertising via DoubleClick (DCLK) and other YouTube-sold sources.</p>
+<p>Note: This metric has been renamed and is called estimated_partner_ad_reserved_revenue in the most current versions of all reports that contain it.</p>
+<h5 id="estimated_partner_ad_reserved_revenue-1">estimated_partner_ad_reserved_revenue</h5>
+<p>(only supported in YouTube Reporting API)<br>
+The total estimated earnings (net revenue) from reserved-sold advertising via DoubleClick (DCLK) and other YouTube-sold sources. This metric was previously named estimated_partner_double_click_revenue.</p>
+<h5 id="estimated_partner_double_click_revenue-1">estimated_partner_double_click_revenue</h5>
+<p>(only supported in YouTube Reporting API)<br>
+The total estimated earnings (net revenue) from reserved-sold advertising via DoubleClick (DCLK) and other YouTube-sold sources.</p>
+<p>Note: This metric has been renamed and is called estimated_partner_ad_reserved_revenue in the most current versions of all reports that contain it.</p>
+<h5 id="estimated_partner_red_revenue">estimated_partner_red_revenue</h5>
+<p>(only supported in YouTube Reporting API)<br>
+The total estimated earnings (net revenue) from YouTube Red subscriptions.</p>
+<h5 id="estimated_partner_transaction_revenue">estimated_partner_transaction_revenue</h5>
+<p>(only supported in YouTube Reporting API)<br>
+The total estimated revenue from transactions, such as paid content and Fan Funding, minus any partner-charged refunds.</p>
+<h3 id="ad-performance-metrics">Ad performance metrics</h3>
+<h5 id="estimated_youtube_ad_revenue">estimated_youtube_ad_revenue</h5>
+<p>The estimated gross revenue, in USD, from all Google-sold or DoubleClick-partner-sold advertising for the selected date range and region. Gross revenue is subject to month-end adjustment and does not include partner-served advertising. Gross revenue should not be confused with earnings, or net revenue, which factors in your share of ownership and revenue-sharing agreements.</p>
+<h5 id="estimated_cpm">estimated_cpm</h5>
+<p>The estimated gross revenue per thousand ad impressions.</p>
+<h5 id="ad_impressions">ad_impressions</h5>
+<p>The number of verified ad impressions served.</p>
+<h5 id="estimated_monetized_playbacks">estimated_monetized_playbacks</h5>
+<p>The number of instances when a viewer played your video and was shown at least one ad impression. A monetized playback is counted if a viewer is shown a preroll ad but quits watching the ad before your video ever starts. The expected estimated error for this figure is ±2.0%.</p>
+<h5 id="estimated_playback_based_cpm">estimated_playback_based_cpm</h5>
+<p>The estimated gross revenue per thousand playbacks.</p>
+<h2 id="dimensions">Dimensions</h2>
+<h3 id="resources">Resources</h3>
+<p>These dimensions correspond to resources that channels and content owners manage on YouTube.</p>
+<h5 id="video_id">video_id</h5>
+<p>The ID of a YouTube video. In the YouTube Data API, this is the value of a video resource’s id property.</p>
+<h5 id="playlist_id">playlist_id</h5>
+<p>The ID of a YouTube playlist. In the YouTube Data API, this is the value of a playlist resource’s id property.</p>
+<h5 id="channel_id">channel_id</h5>
+<p>The ID for a YouTube channel. In the YouTube Data API, this is the value of a channel resource’s id property.</p>
+<h5 id="asset_id">asset_id</h5>
+<p>The ID of an asset managed in YouTube’s Content ID system. An asset is the representation of your intellectual property in that system. On the YouTube website, you can locate asset IDs in YouTube Content Manager. You can also retrieve them using the YouTube Content ID API.</p>
+<h3 id="geographic-areas">Geographic areas</h3>
+<p>These dimensions identify a geographic region associated with user activity, ad performance, or estimated revenue metrics.</p>
+<h5 id="country_code">country_code</h5>
+<p>The country associated with the metrics in the report row. The dimension value is a two-letter ISO-3166-1 country code, such as US, CN (China), or FR (France). The country code ZZ is used to report metrics for which YouTube could not identify the associated country.</p>
+<h5 id="province_code">province_code</h5>
+<p>The U.S. state or territory associated with the metrics in the report row. The dimension values is an ISO 3166-2 code that identifies a U.S. state or the District of Columbia, such as US-MI (Michigan) or US-TX (Texas). The province code US-ZZ is used to report metrics for which YouTube could not identify the associated U.S. state.</p>
+<p>Note: This dimension does not support ISO 3166-2 values that identify U.S. outlying areas since those territories also have their own ISO 3166-1 country codes. It also does not support subdivisions of countries other than the United States.</p>
+<h3 id="time-periods">Time periods</h3>
+<h5 id="date">date</h5>
+<p>This dimension identifies the date associated with the metrics in each report row. In bulk reports, the date refers to the period beginning at 12:00 a.m. Pacific time and ending at 11:59 p.m. Pacific time on the specified day, month, and year. Depending on the time of year, Pacific time is either UTC-7 or UTC-8.</p>
+<p>Note that while dates typically represent a 24-hour period, dates when clocks are adjusted forward for Daylight Savings Time represent a 23-hour period, and dates when clocks are adjusted backward represent a 25-hour period.</p>
+<h3 id="playback-locations">Playback locations</h3>
+<h5 id="playback_location_type">playback_location_type</h5>
+<p>This dimension identifies the type of page or application where user activity occurred. The following table lists dimension values:</p>
+
+<table>
+<thead>
+<tr>
+<th>Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>The data pertains to activity that occurred on the video’s YouTube watch page or in an official YouTube application, such as the YouTube Android app.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>The data pertains to activity that occurred on another website or application where the video was embedded using an &lt;iframe&gt; or &lt;object&gt; embed.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The data pertains to activity that occurred on a YouTube channel page.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>The data pertains to metrics that cannot be classified into one of the other location types listed above.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>The data pertains to views that took place on the YouTube home page or home screen, in the user’s subscription feed, or in another YouTube browsing feature.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>The data pertains to views that took place directly on the YouTube search results page.</td>
+</tr>
+</tbody>
+</table><h5 id="playback_location_detail">playback_location_detail</h5>
+<p>This dimension specifies the URL or application where the playback occurred. This dimension is only supported for views that occurred in embedded players, which means that the dimension value is only populated in rows where the dimension’s value is 1. In other rows, this dimension’s value is empty.</p>
+<h3 id="playback-details">Playback details</h3>
+<h5 id="live_or_on_demand">live_or_on_demand</h5>
+<p>This dimension indicates whether the user activity metrics in the data row are associated with views of a live broadcast. Data for this dimension is available for dates beginning April 1, 2014.</p>
+<p>The following table lists dimension values:</p>
+
+<table>
+<thead>
+<tr>
+<th>Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>live</td>
+<td>The row’s data describes user activity that occurred during a live broadcast.</td>
+</tr>
+<tr>
+<td>onDemand</td>
+<td>The row’s data describes user activity that did not occur during a live broadcast.</td>
+</tr>
+</tbody>
+</table><h5 id="subscribed_status">subscribed_status</h5>
+<p>This dimension indicates whether the user activity metrics in the data row are associated with viewers who were subscribed to the video’s or playlist’s channel. Possible values are subscribed and unsubscribed.<br>
+Note that the dimension value is accurate as of the time that the user activity occurs. For example, suppose a user has not subscribed to a channel and watches one of that channel’s videos, then subscribes to the channel and watches another video, all on the same day. The channel’s report indicates that one view has a subscribed_status value of subscribed, and one view has a subscribed_status value of unsubscribed.</p>
+<h3 id="traffic-sources">Traffic sources</h3>
+<h5 id="traffic_source_type">traffic_source_type</h5>
+<p>This dimension identifies the referrer type associated with the user activity metrics. The referrer type describes the manner in which users reached the video or channel associated with the row of data in the report. The following table lists dimension values:</p>
+
+<table>
+<thead>
+<tr>
+<th>Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td><em>Direct or unknown</em> This value encompasses direct traffic to a page as well as pages for which the referrer is unknown. In query reports, this traffic source type is identified as NO_LINK_OTHER or UNKNOWN_MOBILE_OR_DIRECT.</td>
+</tr>
+<tr>
+<td>1</td>
+<td><em>YouTube advertising</em> The viewer was referred to the video by an advertisement. In a traffic source report, if this dimension’s value is 1, then the traffic_source_detail dimension identifies the type of advertisement that was shown to the viewer. In query reports, this traffic source type is identified as ADVERTISING.</td>
+</tr>
+<tr>
+<td>3</td>
+<td><em>Browse features</em> The viewer was referred from a YouTube page that leads to videos or channels. In a traffic source report, if this dimension’s value is 3, then the traffic_source_detail dimension identifies the feature that referred the traffic. In query reports, this traffic source type is identified as SUBSCRIBER.</td>
+</tr>
+<tr>
+<td>4</td>
+<td><em>YouTube channels</em> Viewers were referred from a YouTube channel page. In a traffic source report, if this dimension’s value is 4, then the traffic_source_detail dimension specifies the channel ID for that channel. In query reports, this traffic source type is identified as YT_CHANNEL.</td>
+</tr>
+<tr>
+<td>5</td>
+<td><em>YouTube search</em> Viewers were referred from YouTube search results. In a traffic source report, if this dimension’s value is 5, then the traffic_source_detail dimension specifies the associated search term. In query reports, this traffic source type is identified as YT_SEARCH.</td>
+</tr>
+<tr>
+<td>7</td>
+<td><em>Suggested videos</em> Viewers were referred from a related video listing on another video watch page. In a traffic source report, if this dimension’s value is 7, then the traffic_source_detail dimension identifies the video ID for that video. In query reports, this traffic source type is identified as RELATED_VIDEO or YT_RELATED.</td>
+</tr>
+<tr>
+<td>8</td>
+<td><em>Other YouTube features</em> Viewers were referred from a YouTube page that does not fall into one of the other listed traffic source types. In a traffic source report, if this dimension’s value is 8, then the traffic_source_detail dimension identifies the page URL. In query reports, this traffic source type is identified as YT_OTHER_PAGE.</td>
+</tr>
+<tr>
+<td>9</td>
+<td><em>External</em> Viewers were referred from a link on another website. This traffic source includes referrals from Google search results. In a traffic source report, if this dimension’s value is 9, then the traffic_source_detail dimension identifies the external web page. In query reports, this traffic source type is identified as EXT_URL.</td>
+</tr>
+<tr>
+<td>11</td>
+<td><em>Video cards and annotations</em> Viewers were referred by clicking on an annotation or card in another video. In query reports, this traffic source type is identified as ANNOTATION.</td>
+</tr>
+<tr>
+<td>14</td>
+<td><em>Playlists</em> Views occurred while the video was being played as part of a playlist. In query reports, this traffic source type is identified as PLAYLIST. Note that this traffic source differs from source type 18, which indicates that the views originated from the page that lists all of the videos in the playlist.</td>
+</tr>
+<tr>
+<td>17</td>
+<td><em>Notifications</em> Viewers were referred from an email or notification from YouTube. In query reports, this traffic source type is identified as NOTIFICATION.</td>
+</tr>
+<tr>
+<td>18</td>
+<td><em>Playlist pages</em> Views originated from a page that lists all of the videos in a playlist. In query reports, this traffic source type is identified as YT_PLAYLIST_PAGE. Note that this traffic source differs from source type 14, which indicates that the views occurred while the video was being played as part of a playlist.</td>
+</tr>
+<tr>
+<td>19</td>
+<td><em>Programming from claimed content</em> Views originated from claimed, user-uploaded videos that the content owner used to promote the viewed content. In query reports, this traffic source is identified as CAMPAIGN_CARD. This traffic source is only supported for content owner reports.</td>
+</tr>
+<tr>
+<td>20</td>
+<td><em>Interactive video endscreen</em> Views originated from the endscreen of another video. In query reports, this traffic source type is identified as END_SCREEN.</td>
+</tr>
+</tbody>
+</table><h5 id="traffic_source_detail">traffic_source_detail</h5>
+<p>This dimension provides additional detail about the traffic source that the row’s traffic_source_type dimension value. This dimension value is populated for the following traffic_source_type dimension values:</p>
+
+<table>
+<thead>
+<tr>
+<th>Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The dimension value identifies the type of advertisement that was shown to the viewer. See the traffic_source_type definition for a list of possible values.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>The dimension value identifies the YouTube feature that led to the referred traffic. See the traffic_source_type definition for a list of possible values.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>The dimension value specifies the channel ID from which the viewer was referred.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>The dimension value specifies the search term that led to the referred traffic.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>The dimension value identifies the video from which the viewer was referred.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>The dimension value identifies the type of YouTube page that led to the referred traffic. See the traffic_source_type definition for a list of possible values.</td>
+</tr>
+<tr>
+<td>9</td>
+<td>The dimension value identifies the external page from which the traffic was referred.</td>
+</tr>
+<tr>
+<td>17</td>
+<td>The dimension value identifies the type of notification that led to the referred traffic. See the traffic_source_type definition for a list of possible values.</td>
+</tr>
+<tr>
+<td>19</td>
+<td>The dimension value identifies the video from which the viewer was referred.</td>
+</tr>
+<tr>
+<td>20</td>
+<td>The dimension value identifies the video from which the viewer was referred.</td>
+</tr>
+</tbody>
+</table><h3 id="devices">Devices</h3>
+<h5 id="device_type">device_type</h5>
+<p>This dimension identifies the physical form factor of the device on which the view occurred. The following table lists valid dimension values:</p>
+
+<table>
+<thead>
+<tr>
+<th>Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100</td>
+<td>Unknown</td>
+</tr>
+<tr>
+<td>101</td>
+<td>Computer</td>
+</tr>
+<tr>
+<td>102</td>
+<td>TV</td>
+</tr>
+<tr>
+<td>103</td>
+<td>Game console</td>
+</tr>
+<tr>
+<td>104</td>
+<td>Mobile phone</td>
+</tr>
+<tr>
+<td>105</td>
+<td>Tablet</td>
+</tr>
+</tbody>
+</table><h5 id="operating_system">operating_system</h5>
+<p>This dimension identifies the software system of the device on which the view occurred. The following table lists valid dimension values:</p>
+
+<table>
+<thead>
+<tr>
+<th>Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Other</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Windows</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Windows Mobile</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Android</td>
+</tr>
+<tr>
+<td>5</td>
+<td>iOS</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Symbian</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Blackberry</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Macintosh</td>
+</tr>
+<tr>
+<td>10</td>
+<td>PlayStation</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Bada</td>
+</tr>
+<tr>
+<td>12</td>
+<td>WebOS</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Linux</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Hiptop</td>
+</tr>
+<tr>
+<td>15</td>
+<td>MeeGo</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Wii</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Xbox</td>
+</tr>
+<tr>
+<td>18</td>
+<td>PlayStation Vita</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Smart TV</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Nintendo 3DS</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Chromecast</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Tizen</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Firefox</td>
+</tr>
+<tr>
+<td>24</td>
+<td>RealMedia</td>
+</tr>
+<tr>
+<td>25</td>
+<td>KaiOS</td>
+</tr>
+</tbody>
+</table><h3 id="demographics">Demographics</h3>
+<p>Demographic dimensions help you to understand the age range and gender distribution of your audience. The YouTube Help Center contains additional information about demographic data in YouTube Analytics reports.</p>
+<h5 id="age_group">age_group</h5>
+<p>This dimension identifies the age group of the logged-in users associated with the report data. The API uses the following age groups:</p>
+<ul>
+<li>AGE_13_17</li>
+<li>AGE_18_24</li>
+<li>AGE_25_34</li>
+<li>AGE_35_44</li>
+<li>AGE_45_54</li>
+<li>AGE_55_64</li>
+<li>AGE_65_</li>
+</ul>
+<h5 id="gender">gender</h5>
+<p>This dimension identifies the gender of the logged-in users associated with the report data. Valid values are FEMALE, MALE, and GENDER_OTHER.</p>
+<p>Note that the YouTube Analytics API currently only returns the values female and male. As such, you may see some discrepancy in the views_percentage metric values that the two APIs return. (In the YouTube Analytics API, views_percentage is called viewerPercentage.)</p>
+<h3 id="engagement-and-content-sharing">Engagement and content sharing</h3>
+<h5 id="sharing_service">sharing_service</h5>
+<p>This dimension identifies the service that was used to share videos. Videos can be shared on YouTube (or via the YouTube player) using the “Share” button.<br>
+The following table lists valid dimension values:</p>
+
+<table>
+<thead>
+<tr>
+<th>Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Unknown</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Digg</td>
+</tr>
+<tr>
+<td>4</td>
+<td>reddit</td>
+</tr>
+<tr>
+<td>5</td>
+<td>StumbleUpon</td>
+</tr>
+<tr>
+<td>6</td>
+<td>mixi</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Yahoo! Japan</td>
+</tr>
+<tr>
+<td>8</td>
+<td>goo</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Ameba</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Facebook</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Myspace</td>
+</tr>
+<tr>
+<td>12</td>
+<td>NUjij</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Tuenti</td>
+</tr>
+<tr>
+<td>20</td>
+<td>menéame</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Wykop</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Skyrock</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Fotka</td>
+</tr>
+<tr>
+<td>28</td>
+<td>hi5</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Twitter</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Cyworld</td>
+</tr>
+<tr>
+<td>34</td>
+<td>Blogger</td>
+</tr>
+<tr>
+<td>36</td>
+<td>VKontakte (ВКонтакте)</td>
+</tr>
+<tr>
+<td>37</td>
+<td>Rakuten (楽天市場)</td>
+</tr>
+<tr>
+<td>38</td>
+<td>LiveJournal</td>
+</tr>
+<tr>
+<td>39</td>
+<td>Odnoklassniki (Одноклассники)</td>
+</tr>
+<tr>
+<td>40</td>
+<td>tumblr.</td>
+</tr>
+<tr>
+<td>42</td>
+<td>Linkedin</td>
+</tr>
+<tr>
+<td>43</td>
+<td>Google+</td>
+</tr>
+<tr>
+<td>44</td>
+<td>Weibo</td>
+</tr>
+<tr>
+<td>45</td>
+<td>Pinterest</td>
+</tr>
+<tr>
+<td>46</td>
+<td>Email</td>
+</tr>
+<tr>
+<td>47</td>
+<td>Facebook Messenger</td>
+</tr>
+<tr>
+<td>49</td>
+<td>WhatsApp</td>
+</tr>
+<tr>
+<td>50</td>
+<td>Hangouts</td>
+</tr>
+<tr>
+<td>51</td>
+<td>Gmail</td>
+</tr>
+<tr>
+<td>52</td>
+<td>Kakao (Kakao Talk)</td>
+</tr>
+<tr>
+<td>53</td>
+<td>Other</td>
+</tr>
+<tr>
+<td>55</td>
+<td>Copy to Clipboard</td>
+</tr>
+<tr>
+<td>59</td>
+<td>Embed</td>
+</tr>
+<tr>
+<td>60</td>
+<td>Text message</td>
+</tr>
+<tr>
+<td>61</td>
+<td>Android messaging</td>
+</tr>
+<tr>
+<td>62</td>
+<td>Verizon messages</td>
+</tr>
+<tr>
+<td>63</td>
+<td>HTC text message</td>
+</tr>
+<tr>
+<td>64</td>
+<td>Sony Conversations</td>
+</tr>
+<tr>
+<td>65</td>
+<td>Go SMS</td>
+</tr>
+<tr>
+<td>66</td>
+<td>LGE Email</td>
+</tr>
+<tr>
+<td>67</td>
+<td>Line</td>
+</tr>
+<tr>
+<td>68</td>
+<td>Viber</td>
+</tr>
+<tr>
+<td>69</td>
+<td>Kik</td>
+</tr>
+<tr>
+<td>70</td>
+<td>Skype</td>
+</tr>
+<tr>
+<td>71</td>
+<td>Blackberry Messenger</td>
+</tr>
+<tr>
+<td>72</td>
+<td>WeChat</td>
+</tr>
+<tr>
+<td>73</td>
+<td>KAKAO Story</td>
+</tr>
+<tr>
+<td>74</td>
+<td>Dropbox</td>
+</tr>
+<tr>
+<td>75</td>
+<td>Telegram</td>
+</tr>
+<tr>
+<td>76</td>
+<td>Facebook Pages</td>
+</tr>
+<tr>
+<td>77</td>
+<td>GroupMe</td>
+</tr>
+<tr>
+<td>78</td>
+<td>Android Email</td>
+</tr>
+<tr>
+<td>79</td>
+<td>Motorola Messaging</td>
+</tr>
+<tr>
+<td>80</td>
+<td>Nearby Share</td>
+</tr>
+<tr>
+<td>81</td>
+<td>Naver</td>
+</tr>
+<tr>
+<td>82</td>
+<td>iOS System Activity Dialog</td>
+</tr>
+<tr>
+<td>83</td>
+<td>Google Inbox</td>
+</tr>
+<tr>
+<td>84</td>
+<td>Android Messenger</td>
+</tr>
+<tr>
+<td>85</td>
+<td>YouTube Music</td>
+</tr>
+<tr>
+<td>86</td>
+<td>YouTube Gaming</td>
+</tr>
+<tr>
+<td>87</td>
+<td>YouTube Kids</td>
+</tr>
+<tr>
+<td>88</td>
+<td>YouTube TV</td>
+</tr>
+</tbody>
+</table><h3 id="annotations">Annotations</h3>
+<h5 id="annotation_type">annotation_type</h5>
+<p>This dimension identifies the manner in which the annotation displays during the video. The following table lists possible dimension values:</p>
+
+<table>
+<thead>
+<tr>
+<th>Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Unknown</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Note</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Spotlight</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Title</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Speech bubble</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Label</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Branding watermark</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Featured video</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Featured playlist</td>
+</tr>
+<tr>
+<td>30</td>
+<td>Call-to-Action</td>
+</tr>
+</tbody>
+</table><h5 id="annotation_id">annotation_id</h5>
+<p>The ID that YouTube uses to uniquely identify an annotation.</p>
+<h3 id="cards">Cards</h3>
+<h5 id="card_type">card_type</h5>
+<p>This dimension identifies the type of card that was displayed to the user. The following table lists possible dimension values:</p>
+
+<table>
+<thead>
+<tr>
+<th>Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Unknown</td>
+</tr>
+<tr>
+<td>60</td>
+<td>Link</td>
+</tr>
+<tr>
+<td>61</td>
+<td>Fundraising</td>
+</tr>
+<tr>
+<td>62</td>
+<td>Video</td>
+</tr>
+<tr>
+<td>63</td>
+<td>Playlist</td>
+</tr>
+<tr>
+<td>65</td>
+<td>Fan Funding</td>
+</tr>
+<tr>
+<td>66</td>
+<td>Merchandise</td>
+</tr>
+<tr>
+<td>68</td>
+<td>Associated website</td>
+</tr>
+<tr>
+<td>69</td>
+<td>Channel</td>
+</tr>
+</tbody>
+</table><h5 id="card_id">card_id</h5>
+<p>The ID that YouTube uses to uniquely identify a card.</p>
+<h3 id="end-screens">End screens</h3>
+<h5 id="end_screen_element_type">end_screen_element_type</h5>
+<p>This dimension identifies the type of end screen element that was displayed to the user. The following table lists the end screen element types and their values:</p>
+
+<table>
+<thead>
+<tr>
+<th>Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>501</td>
+<td>Video - The element promotes another YouTube video.</td>
+</tr>
+<tr>
+<td>502</td>
+<td>Playlist - The element promotes YouTube playlist.</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Website - The element links to your associated website.</td>
+</tr>
+<tr>
+<td>504</td>
+<td>Channel - The element links to another channel.</td>
+</tr>
+<tr>
+<td>505</td>
+<td>Subscribe - The element encourages subscriptions to your channel.</td>
+</tr>
+<tr>
+<td>506</td>
+<td>Associated</td>
+</tr>
+<tr>
+<td>507</td>
+<td>Crowdfunding - The element links to an approved crowdfunding website.</td>
+</tr>
+<tr>
+<td>508</td>
+<td>Merchandise - The element links to an approved merchandise website.</td>
+</tr>
+<tr>
+<td>509</td>
+<td>Recent upload - The element links to your channel’s most recently uploaded video.</td>
+</tr>
+<tr>
+<td>510</td>
+<td>Best for viewer</td>
+</tr>
+</tbody>
+</table><h5 id="end_screen_element_id">end_screen_element_id</h5>
+<p>The ID that YouTube uses to uniquely identify an end screen element.</p>
+<h3 id="subtitles">Subtitles</h3>
+<h5 id="subtitle_language">subtitle_language</h5>
+<p>This dimension identifies the closed caption language used for the longest time during the view. Views for which closed captions were mostly turned off are not counted. See the documentation for channel reports or content owner reports for more information about reports that contain this dimension.</p>
+<h3 id="ad-performance">Ad performance</h3>
+<h5 id="ad_type">ad_type</h5>
+<p>The ad_type dimension is used in ad performance reports and aggregates the requested metrics based on the types of ads that ran during video playbacks. The following table lists possible dimension values.</p>
+
+<table>
+<thead>
+<tr>
+<th>Values</th>
+<th>Description</th>
+<th>Value in Query Reports</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Skippable video ads (Auction)</td>
+<td>auctionTrueviewInstream</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Display ads (Auction)</td>
+<td>auctionDisplay</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Non-skippable video ads (Auction)</td>
+<td>auctionInstream</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Display ads (Reserved)</td>
+<td>reservedDisplay</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Non-skippable video ads (Reserved)</td>
+<td>reservedInstream</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Unknown</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Skippable video ads (Reserved)</td>
+<td>reservedInstreamSelect</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Bumper ads (auction)</td>
+<td>auctionBumperInstream</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Bumper ads (reserved)</td>
+<td>reservedBumperInstream</td>
+</tr>
+</tbody>
+</table><p>Note: Query reports might return for some additional ad types that were previously used on YouTube.</p>
+<h3 id="content-owner-dimensions">Content owner dimensions</h3>
+<p>The following dimensions are only used in content owner reports.</p>
+<h5 id="claimed_status">claimed_status</h5>
+<p>(only used in content owner reports)<br>
+This dimension indicate that a row of data only contains metrics for claimed content. The only valid value for this dimension is claimed. The table in the definition of the uploader_type dimension provides more detail about how to use this dimension.</p>
+<h5 id="uploader_type">uploader_type</h5>
+<p>(only used in content owner reports)<br>
+This dimension indicates whether a row of data contains metrics for content uploaded by the specified content owner and/or content uploaded by third parties, such as user-uploaded videos. Valid values are self and thirdParty.<br>
+The table below shows the supported combinations for the claimed_status and uploader_type dimensions:</p>
+
+<table>
+<thead>
+<tr>
+<th>claimed_status</th>
+<th>uploader_type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[Not set]</td>
+<td>self</td>
+<td>The row contains YouTube Analytics data for claimed and unclaimed content uploaded by the content owner.</td>
+</tr>
+<tr>
+<td>claimed</td>
+<td>self</td>
+<td>The row contains data for claimed content uploaded by the content owner.</td>
+</tr>
+<tr>
+<td>claimed</td>
+<td>thirdParty</td>
+<td>The row contains data for claimed content uploaded by a third party.</td>
+</tr>
+</tbody>
+</table></div>
+</body>
+
+</html>

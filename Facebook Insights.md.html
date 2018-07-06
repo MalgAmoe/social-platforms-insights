@@ -1,0 +1,1057 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facebook Insights.md</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="facebook-insights">Facebook Insights</h1>
+<p>Selection of metrics from facebook insights organized by categories.</p>
+<h3 id="permissions">Permissions</h3>
+<p>A Page access token with read_insights permissions</p>
+<h3 id="naming-patterns-for-metrics">Naming Patterns for Metrics</h3>
+<p>The _unique suffix indicates that this metric shows the number of unique users who performed a specific action. Metrics generated with the _unique suffix are approximate and may not be 100% accurate.</p>
+<p>The _login and _logout suffixes indicate whether someone was logged into or out of Facebook.</p>
+<p>The _source suffix indicates that the metric will be broken down into a list of referral sources. External referrals are broken down by domain. Internal referrals are broken down by Facebook-specific features such as ‘Profile’, ‘Search’, ‘Requests’, ‘Suggestions’, ‘Stream’, etc. In these case the value returned will be an object containing a series of key-value pairs where the key is the source name and the value is the metric for that source.</p>
+<p>Most metrics will update once every 24 hours. Some metrics, marked with an *, are refreshed several times during the day.</p>
+<h2 id="global-stats">Global Stats</h2>
+<h3 id="page-and-post-stories-and-people-talking-about-this">Page and Post Stories and “People talking about this”</h3>
+<h4 id="time-framed-stats">Time framed stats</h4>
+<h5 id="page_content_activity">page_content_activity</h5>
+<p>The number of stories created about your Page (Stories).<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_content_activity_by_action_type">page_content_activity_by_action_type</h5>
+<p>The number of stories about your Page’s stories, by Page story type.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_content_activity_by_action_type_unique">page_content_activity_by_action_type_unique</h5>
+<p>The number of people talking about your Page’s stories, by Page story type.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_content_activity_by_age_gender_unique">page_content_activity_by_age_gender_unique</h5>
+<p>The number of People Talking About the Page by user age and gender.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_content_activity_by_country_unique">page_content_activity_by_country_unique</h5>
+<p>The number of people, aggregated per country, that are talking about your Page. Only the 45 countries with the most people talking about your page are included.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_content_activity_by_city_unique">page_content_activity_by_city_unique</h5>
+<p>The number of People Talking About the Page by user city.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_content_activity_by_locale_unique">page_content_activity_by_locale_unique</h5>
+<p>The number of People Talking About the Page by user language.<br>
+<em>day, week, days_28</em></p>
+<h4 id="lifetime-stats">Lifetime Stats</h4>
+<h5 id="post_activity">post_activity*</h5>
+<p>The number of stories generated about your Page post (‘Stories’).<br>
+<em>lifetime</em></p>
+<h5 id="post_activity_unique">post_activity_unique*</h5>
+<p>The number of unique people who created a story about your Page post (‘People Talking About This’ / PTAT).<br>
+<em>lifetime</em></p>
+<h5 id="post_activity_by_action_type">post_activity_by_action_type*</h5>
+<p>The number of stories created about your Page post, by action type.<br>
+<em>lifetime</em></p>
+<h5 id="post_activity_by_action_type_unique">post_activity_by_action_type_unique*</h5>
+<p>The number of unique people who created a story about your Page post, by action type.<br>
+<em>lifetime</em></p>
+<h3 id="page-impressions">Page Impressions</h3>
+<p>Note that the unique impression insights values are calculated independently. Total page reach may not always be exactly equal to the sum of viral_unique and organic_unique.</p>
+<h5 id="page_impressions">page_impressions*</h5>
+<p>The number of times any content from your Page or about your Page entered a person’s screen. This includes posts, check-ins, ads, social information from people who interact with your Page and more.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_impressions_unique">page_impressions_unique*</h5>
+<p>The number of people who had any content from your Page or about your Page enter their screen. This includes posts, check-ins, ads, social information from people who interact with your Page and more.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_impressions_paid">page_impressions_paid*</h5>
+<p>The number of times any content from your Page or about your Page entered a person’s screen through paid distribution such as an ad.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_impressions_paid_unique">page_impressions_paid_unique*</h5>
+<p>The number of people who had any content from your Page or about your Page enter their screen through paid distribution such as an ad.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_impressions_organic">page_impressions_organic*</h5>
+<p>The number of times any content from your Page or about your Page entered a person’s screen through unpaid distribution. This includes posts, check-ins, social information from people who interact with your Page and more.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_impressions_organic_unique">page_impressions_organic_unique*</h5>
+<p>The number of people who had any content from your Page or about your Page enter their screen through unpaid distribution. This includes posts, check-ins, social information from people who interact with your Page and more.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_impressions_viral">page_impressions_viral*</h5>
+<p>The number of times any content from your Page or about your Page entered a person’s screen with social information attached. Social information displays when a person’s friend interacted with you Page or post. This includes when someone’s friend likes or follows your Page, engages with a post, shares a photo of your Page and checks into your Page.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_impressions_viral_unique">page_impressions_viral_unique*</h5>
+<p>The number of people who had any content from your Page or about your Page enter their screen through with social information attached. As a form of organic distribution, social information displays when a person’s friend interacted with you Page or post. This includes when someone’s friend likes or follows your Page, engages with a post, shares a photo of your Page and checks into your Page.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_impressions_nonviral">page_impressions_nonviral*</h5>
+<p>The number of times any content from your Page entered a person’s screen. This does not include content created about your Page with social information attached. Social information displays when a person’s friend interacted with you Page or post. This includes when someone’s friend likes or follows your Page, engages with a post, shares a photo of your Page and checks into your Page.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_impressions_nonviral_unique">page_impressions_nonviral_unique*</h5>
+<p>The number of people who had any content from your Page enter their screen. This does not include content created about your Page with social information attached. As a form of organic distribution, social information displays when a person’s friend interacted with you Page or post. This includes when someone’s friend likes or follows your Page, engages with a post, shares a photo of your Page and checks into your Page.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_impressions_by_story_type">page_impressions_by_story_type</h5>
+<p>Total impressions of stories published by a friend about your Page by story type.<br>
+<em>day, week, days_28</em></p>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>checkin</td>
+<td>Page checkins</td>
+</tr>
+<tr>
+<td>coupon</td>
+<td>Offer claims</td>
+</tr>
+<tr>
+<td>event</td>
+<td>RSVPing to event</td>
+</tr>
+<tr>
+<td>fan</td>
+<td>Page likes</td>
+</tr>
+<tr>
+<td>mention</td>
+<td>Page mentions</td>
+</tr>
+<tr>
+<td>page post</td>
+<td>Posts by a Page</td>
+</tr>
+<tr>
+<td>question</td>
+<td>Question answers</td>
+</tr>
+<tr>
+<td>user post</td>
+<td>Posts by people on a Page</td>
+</tr>
+<tr>
+<td>other</td>
+<td>Other types</td>
+</tr>
+</tbody>
+</table><h5 id="page_impressions_by_story_type_unique">page_impressions_by_story_type_unique</h5>
+<p>The number of people who saw stories published by a friend about your Page by story type.<br>
+<em>day, week, days_28</em></p>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>checkin</td>
+<td>Page checkins</td>
+</tr>
+<tr>
+<td>coupon</td>
+<td>Offer claims</td>
+</tr>
+<tr>
+<td>event</td>
+<td>RSVPing to event</td>
+</tr>
+<tr>
+<td>fan</td>
+<td>Page likes</td>
+</tr>
+<tr>
+<td>mention</td>
+<td>Page mentions</td>
+</tr>
+<tr>
+<td>page post</td>
+<td>Posts by a Page</td>
+</tr>
+<tr>
+<td>question</td>
+<td>Question answers</td>
+</tr>
+<tr>
+<td>user post</td>
+<td>Posts by people on a Page</td>
+</tr>
+<tr>
+<td>other</td>
+<td>Other types</td>
+</tr>
+</tbody>
+</table><h5 id="page_impressions_by_city_unique">page_impressions_by_city_unique</h5>
+<p>The number of people who have seen any content associated with your Page by city.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_impressions_by_country_unique">page_impressions_by_country_unique</h5>
+<p>The number of people who have seen any content associated with your Page by country.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_impressions_by_locale_unique">page_impressions_by_locale_unique</h5>
+<p>The number of people who have seen any content associated with your Page by user selected language.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_impressions_by_age_gender_unique">page_impressions_by_age_gender_unique</h5>
+<p>The number of people who saw any content by your Page or about your Page, grouped by age and gender.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_impressions_frequency_distribution">page_impressions_frequency_distribution</h5>
+<p>The number of people your Page reached broken down by how many times people saw any content about your Page.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_impressions_viral_frequency_distribution">page_impressions_viral_frequency_distribution</h5>
+<p>The number of people your Page reached from a story published by a friend, broken down by how many times people saw stories about your Page.<br>
+<em>day, week, days_28</em></p>
+<h3 id="page-engagement">Page Engagement</h3>
+<h5 id="page_engaged_users">page_engaged_users</h5>
+<p>The number of people who engaged with your Page. Engagement includes any click.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_post_engagements">page_post_engagements*</h5>
+<p>The number of times people have engaged with your posts through likes, comments and shares and more.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_consumptions">page_consumptions</h5>
+<p>The number of times people clicked on any of your content.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_consumptions_unique">page_consumptions_unique</h5>
+<p>The number of people who clicked on any of your content.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_consumptions_by_consumption_type">page_consumptions_by_consumption_type</h5>
+<p>The number of times people clicked on any of your content, by type.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_consumptions_by_consumption_type_unique">page_consumptions_by_consumption_type_unique</h5>
+<p>The number of people who clicked on any of your content, by type.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_places_checkin_total">page_places_checkin_total</h5>
+<p>The number of times people checked into a place.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_places_checkin_total_unique">page_places_checkin_total_unique</h5>
+<p>The number of people who checked into a place.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_places_checkin_mobile">page_places_checkin_mobile</h5>
+<p>The number of times people checked into a place using mobile phones.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_places_checkin_mobile_unique">page_places_checkin_mobile_unique</h5>
+<p>The number of people who checked into a place using mobile phones.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_places_checkins_by_age_gender">page_places_checkins_by_age_gender</h5>
+<p>gender and age of people who checked in at your Place.<br>
+<em>day</em></p>
+<h5 id="page_places_checkins_by_locale">page_places_checkins_by_locale</h5>
+<p>top locales of people who checked into your Place.<br>
+<em>day</em></p>
+<h5 id="page_places_checkins_by_country">page_places_checkins_by_country</h5>
+<p>top countries of people who checked into your Place.<br>
+<em>day</em></p>
+<h5 id="page_negative_feedback">page_negative_feedback</h5>
+<p>The number of times people took a negative action (e.g., un-liked or hid a post).<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_negative_feedback_unique">page_negative_feedback_unique</h5>
+<p>The number of people who took a negative action (e.g., un-liked or hid a post).<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_negative_feedback_by_type">page_negative_feedback_by_type</h5>
+<p>The number of times people took a negative action broken down by type.<br>
+<em>day, week, days_28</em></p>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hide_clicks</td>
+<td>Hide this story</td>
+</tr>
+<tr>
+<td>hide_all_clicks</td>
+<td>Hide all posts from this page</td>
+</tr>
+<tr>
+<td>report_spam_clicks</td>
+<td>Report an object as a spam</td>
+</tr>
+<tr>
+<td>unlike_page_clicks</td>
+<td>Unlike a page</td>
+</tr>
+<tr>
+<td>xbutton_clicks</td>
+<td>Deprecated. This is no longer logged</td>
+</tr>
+</tbody>
+</table><h5 id="page_negative_feedback_by_type_unique">page_negative_feedback_by_type_unique</h5>
+<p>The number of people who took a negative action broken down by type. (See possible types)<br>
+<em>day, week, days_28</em></p>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hide_clicks</td>
+<td>Hide this story</td>
+</tr>
+<tr>
+<td>hide_all_clicks</td>
+<td>Hide all posts from this page</td>
+</tr>
+<tr>
+<td>report_spam_clicks</td>
+<td>Report an object as a spam</td>
+</tr>
+<tr>
+<td>unlike_page_clicks</td>
+<td>Unlike a page</td>
+</tr>
+<tr>
+<td>xbutton_clicks</td>
+<td>Deprecated. This is no longer logged</td>
+</tr>
+</tbody>
+</table><h5 id="page_positive_feedback_by_type">page_positive_feedback_by_type</h5>
+<p>The number of times people took a positive action broken down by type<br>
+<em>day, week, days_28</em></p>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>like</td>
+<td>Like a story</td>
+</tr>
+<tr>
+<td>comment</td>
+<td>Comment on a story</td>
+</tr>
+<tr>
+<td>link</td>
+<td>Share a story</td>
+</tr>
+<tr>
+<td>answer</td>
+<td>Answer a question</td>
+</tr>
+<tr>
+<td>claim</td>
+<td>Claim an offer</td>
+</tr>
+<tr>
+<td>rsvp</td>
+<td>Respond to an event</td>
+</tr>
+</tbody>
+</table><h5 id="page_positive_feedback_by_type_unique">page_positive_feedback_by_type_unique</h5>
+<p>The number of people who took a positive action broken down by type. (See possible types)<br>
+<em>day, week, days_28</em></p>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>like</td>
+<td>Like a story</td>
+</tr>
+<tr>
+<td>comment</td>
+<td>Comment on a story</td>
+</tr>
+<tr>
+<td>link</td>
+<td>Share a story</td>
+</tr>
+<tr>
+<td>answer</td>
+<td>Answer a question</td>
+</tr>
+<tr>
+<td>claim</td>
+<td>Claim an offer</td>
+</tr>
+<tr>
+<td>rsvp</td>
+<td>Respond to an event</td>
+</tr>
+</tbody>
+</table><h5 id="page_fans_online">page_fans_online</h5>
+<p>The number of your fans who saw any posts on Facebook on a given day, broken down by hour of day in PST/PDT.<br>
+<em>day</em></p>
+<h5 id="page_fans_online_per_day">page_fans_online_per_day</h5>
+<p>The number of your fans who saw any posts on Facebook on a given day.<br>
+<em>day</em></p>
+<h5 id="page_fan_adds_by_paid_non_paid_unique">page_fan_adds_by_paid_non_paid_unique</h5>
+<p>The number of new people who have liked your page broken down by paid and non-paid.<br>
+<em>day</em></p>
+<h3 id="page-reactions">Page Reactions</h3>
+<h5 id="page_actions_post_reactions_like_total">page_actions_post_reactions_like_total</h5>
+<p>Daily total post “like” reactions of a page.<br>
+<em>day</em></p>
+<h5 id="page_actions_post_reactions_love_total">page_actions_post_reactions_love_total</h5>
+<p>Daily total post “love” reactions of a page.<br>
+<em>day</em></p>
+<h5 id="page_actions_post_reactions_wow_total">page_actions_post_reactions_wow_total</h5>
+<p>Daily total post “wow” reactions of a page.<br>
+<em>day</em></p>
+<h5 id="page_actions_post_reactions_haha_total">page_actions_post_reactions_haha_total</h5>
+<p>Daily total post “haha” reactions of a page.<br>
+<em>day</em></p>
+<h5 id="page_actions_post_reactions_sorry_total">page_actions_post_reactions_sorry_total</h5>
+<p>Daily total post “sorry” reactions of a page.<br>
+<em>day</em></p>
+<h5 id="page_actions_post_reactions_anger_total">page_actions_post_reactions_anger_total</h5>
+<p>Daily total post “anger” reactions of a page.<br>
+<em>day</em></p>
+<h5 id="page_actions_post_reactions_total">page_actions_post_reactions_total</h5>
+<p>Daily total post reactions of a page by type.<br>
+<em>day</em></p>
+<h3 id="page-cta-clicks">Page CTA Clicks</h3>
+<h5 id="page_total_actions">page_total_actions</h5>
+<p>The number of clicks on your Page’s contact info and call-to-action button.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_cta_clicks_logged_in_total">page_cta_clicks_logged_in_total</h5>
+<p>Total number of clicks on the Page CTA button by people who are logged in to Facebook.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_cta_clicks_logged_in_unique">page_cta_clicks_logged_in_unique</h5>
+<p>Unique number of clicks on the Page CTA button by people who are logged in to Facebook.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_cta_clicks_by_site_logged_in_unique">page_cta_clicks_by_site_logged_in_unique</h5>
+<p>Number of unique people who are logged in to Facebook and clicked on the CTA button, broken down by www, mobile, api or other.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_cta_clicks_by_age_gender_logged_in_unique">page_cta_clicks_by_age_gender_logged_in_unique</h5>
+<p>Number of unique people who are logged in to Facebook and clicked the Page CTA button, broken down by age and gender group.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_cta_clicks_logged_in_by_country_unique">page_cta_clicks_logged_in_by_country_unique</h5>
+<p>Number of unique people who are logged in to Facebook and clicked the Page CTA button, broken down by country.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_cta_clicks_logged_in_by_city_unique">page_cta_clicks_logged_in_by_city_unique</h5>
+<p>Number of unique people who are logged in to Facebook and clicked the Page CTA button, broken down by city.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_call_phone_clicks_logged_in_unique">page_call_phone_clicks_logged_in_unique</h5>
+<p>Number of unique people who logged in to Facebook and clicked the Call Now button.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_call_phone_clicks_by_age_gender_logged_in_unique">page_call_phone_clicks_by_age_gender_logged_in_unique</h5>
+<p>Number of unique people who logged in to Facebook and clicked the Call Now button, broken down by age and gender group.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_call_phone_clicks_logged_in_by_country_unique">page_call_phone_clicks_logged_in_by_country_unique</h5>
+<p>Number of unique people who logged in to Facebook and clicked the Call Now button, broken down by countries.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_call_phone_clicks_logged_in_by_city_unique">page_call_phone_clicks_logged_in_by_city_unique</h5>
+<p>Number of unique people who logged in to Facebook and clicked the Call Now button, broken down by city.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_call_phone_clicks_by_site_logged_in_unique">page_call_phone_clicks_by_site_logged_in_unique</h5>
+<p>Number of unique people who logged in to Facebook and clicked the Call Now button, broken down by www, mobile, api<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_get_directions_clicks_logged_in_unique">page_get_directions_clicks_logged_in_unique</h5>
+<p>Number of unique people who logged in to Facebook and clicked the Get Directions button.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_get_directions_clicks_by_age_gender_logged_in_unique">page_get_directions_clicks_by_age_gender_logged_in_unique</h5>
+<p>Number of unique people who logged in to Facebook and clicked the Get Directions button, broken down by age and gender group.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_get_directions_clicks_logged_in_by_country_unique">page_get_directions_clicks_logged_in_by_country_unique</h5>
+<p>Number of unique people who logged in to Facebook and clicked the Get Directions button, broken down by country.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_get_directions_clicks_logged_in_by_city_unique">page_get_directions_clicks_logged_in_by_city_unique</h5>
+<p>Number of unique people who logged in to Facebook and clicked the Get Directions button, broken down by city.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_get_directions_clicks_by_site_logged_in_unique">page_get_directions_clicks_by_site_logged_in_unique</h5>
+<p>Number of unique people who logged in to Facebook and clicked the Get Directions button, broken down by www, mobile, api or other.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_website_clicks_logged_in_unique">page_website_clicks_logged_in_unique</h5>
+<p>Number of unique people who logged in to Facebook and clicked the goto website CTA button.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_website_clicks_by_age_gender_logged_in_unique">page_website_clicks_by_age_gender_logged_in_unique</h5>
+<p>Number of unique people who logged in to Facebook and clicked the goto website CTA button, broken down by age and gender group.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_website_clicks_logged_in_by_country_unique">page_website_clicks_logged_in_by_country_unique</h5>
+<p>Number of unique people who logged in to Facebook and clicked the goto website CTA button, broken down by country.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_website_clicks_logged_in_by_city_unique">page_website_clicks_logged_in_by_city_unique</h5>
+<p>Number of unique people who logged in to Facebook and clicked the goto website CTA button, broken down by city.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_website_clicks_by_site_logged_in_unique">page_website_clicks_by_site_logged_in_unique</h5>
+<p>Number of unique people who logged in to Facebook and clicked the Page CTA button, broken down by www, mobile, api and other.<br>
+<em>day, week, days_28</em></p>
+<h3 id="page-user-demographics">Page User Demographics</h3>
+<h5 id="page_fans">page_fans</h5>
+<p>The total number of people who have liked your Page. A Page must have 30 or more fans for this metric to return data.<br>
+<em>lifetime</em></p>
+<h5 id="page_fans_locale">page_fans_locale</h5>
+<p>Aggregated language data about the people who like your Page based on the default language setting selected when accessing Facebook.<br>
+<em>lifetime</em></p>
+<h5 id="page_fans_city">page_fans_city</h5>
+<p>Aggregated Facebook location data, sorted by city, about the people who like your Page.<br>
+<em>lifetime</em></p>
+<h5 id="page_fans_country">page_fans_country</h5>
+<p>The number of people, aggregated per country, that like your Page. Only the 45 countries with the most people that like your Page are included.<br>
+<em>lifetime</em></p>
+<h5 id="page_fans_gender_age">page_fans_gender_age</h5>
+<p>Aggregated demographic data about the people who like your Page based on the age and gender information they provide in their user profiles.<br>
+<em>lifetime</em></p>
+<h5 id="page_fan_adds">page_fan_adds</h5>
+<p>The number of new people who have liked your Page.<br>
+<em>day</em></p>
+<h5 id="page_fan_adds_unique">page_fan_adds_unique</h5>
+<p>The number of new people who have liked your Page.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_fans_by_like_source">page_fans_by_like_source</h5>
+<p>This is a breakdown of the number of Page likes from the most common places where people can like your Page.<br>
+<em>day</em></p>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ads</td>
+<td>Page likes that came from people who saw your Page or post in an ad.</td>
+</tr>
+<tr>
+<td>News Feed</td>
+<td>Page likes that came from people who saw content posted by your Page or about your Page in News Feed.</td>
+</tr>
+<tr>
+<td>Page Suggestions</td>
+<td>Page likes that came from people saw your Page in a list of suggested Pages.</td>
+</tr>
+<tr>
+<td>Restored Likes from Reactivated Accounts</td>
+<td>Page likes that came from people who reactivated their Facebook profile.</td>
+</tr>
+<tr>
+<td>Search</td>
+<td>Page likes that came from people who saw you Page or post in search</td>
+</tr>
+<tr>
+<td>Your Page</td>
+<td>Page likes that came from people who visited your Page.</td>
+</tr>
+</tbody>
+</table><h5 id="page_fans_by_like_source_unique">page_fans_by_like_source_unique</h5>
+<p>The number of people who liked your Page, broken down by the most common places where people can like your Page.<br>
+<em>day</em></p>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ads</td>
+<td>Page likes that came from people who saw your Page or post in an ad.</td>
+</tr>
+<tr>
+<td>News Feed</td>
+<td>Page likes that came from people who saw content posted by your Page or about your Page in News Feed.</td>
+</tr>
+<tr>
+<td>Page Suggestions</td>
+<td>Page likes that came from people saw your Page in a list of suggested Pages.</td>
+</tr>
+<tr>
+<td>Restored Likes from Reactivated Accounts</td>
+<td>Page likes that came from people who reactivated their Facebook profile.</td>
+</tr>
+<tr>
+<td>Search</td>
+<td>Page likes that came from people who saw you Page or post in search</td>
+</tr>
+<tr>
+<td>Your Page</td>
+<td>Page likes that came from people who visited your Page.</td>
+</tr>
+</tbody>
+</table><h5 id="page_fan_removes">page_fan_removes</h5>
+<p>Unlikes of your Page.<br>
+<em>day</em></p>
+<h5 id="page_fan_removes_unique">page_fan_removes_unique</h5>
+<p>Number of people unliking your Page.<br>
+<em>day</em></p>
+<h5 id="page_fans_by_unlike_source_unique">page_fans_by_unlike_source_unique</h5>
+<p>The number of people who unliked your Page, broken down by the most common ways people can unlike your Page.<br>
+<em>day</em></p>
+<h3 id="page-content">Page Content</h3>
+<p>Most of the metrics below can be retrieved using post_stories_by_action_type, post_consumptions_by_type, and page_consumptions_by_consumption_type.</p>
+<h5 id="page_tab_views_login_top_unique">page_tab_views_login_top_unique</h5>
+<p>The number of users logged in to Facebook who saw tabs on your Page.<br>
+<em>day, week</em></p>
+<h5 id="page_tab_views_login_top">page_tab_views_login_top</h5>
+<p>The number of times users logged in to Facebook saw tabs on your Page.<br>
+<em>day, week</em></p>
+<h5 id="page_tab_views_logout_top">page_tab_views_logout_top</h5>
+<p>The number of times users not logged in to Facebook saw tabs on your Page.<br>
+<em>day</em></p>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>allactivity</td>
+<td>Administrative tab</td>
+</tr>
+<tr>
+<td>app</td>
+<td>Custom created tab</td>
+</tr>
+<tr>
+<td>info</td>
+<td>About tab view</td>
+</tr>
+<tr>
+<td>insights</td>
+<td>Insights tab</td>
+</tr>
+<tr>
+<td>likes</td>
+<td>Likes tab</td>
+</tr>
+<tr>
+<td>locations</td>
+<td>Map tab</td>
+</tr>
+<tr>
+<td>photos</td>
+<td>Photos tab</td>
+</tr>
+<tr>
+<td>photos_albums</td>
+<td>Photos tab</td>
+</tr>
+<tr>
+<td>photos_stream</td>
+<td>Photos tab</td>
+</tr>
+<tr>
+<td>profile</td>
+<td>Pages timeline</td>
+</tr>
+<tr>
+<td>profile_info</td>
+<td>Info tab</td>
+</tr>
+<tr>
+<td>profile_likes</td>
+<td>Likes tab</td>
+</tr>
+<tr>
+<td>profile_photos</td>
+<td>Photos tab</td>
+</tr>
+<tr>
+<td>timeline</td>
+<td>Pages timeline</td>
+</tr>
+<tr>
+<td>events</td>
+<td>Events tab</td>
+</tr>
+<tr>
+<td>videos</td>
+<td>Videos tab</td>
+</tr>
+<tr>
+<td>wall</td>
+<td>Timeline</td>
+</tr>
+</tbody>
+</table><h3 id="page-views">Page Views</h3>
+<h5 id="page_views_total">page_views_total</h5>
+<p>The number of times a Page’s profile has been viewed by logged in and logged out people.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_views_logout">page_views_logout</h5>
+<p>The number of times a Page’s profile has been viewed by people not logged in to Facebook.<br>
+<em>day</em></p>
+<h5 id="page_views_logged_in_total">page_views_logged_in_total</h5>
+<p>The number of times a Page’s profile has been viewed by people logged in to Facebook.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_views_logged_in_unique">page_views_logged_in_unique</h5>
+<p>The number of people logged in to Facebook who have viewed the Page profile.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_views_external_referrals">page_views_external_referrals</h5>
+<p>Top referrering external domains sending traffic to your Page.<br>
+<em>day</em></p>
+<h5 id="page_views_by_profile_tab_total">page_views_by_profile_tab_total</h5>
+<p>The number of people who have viewed each Page profile tab.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_views_by_profile_tab_logged_in_unique">page_views_by_profile_tab_logged_in_unique</h5>
+<p>The number of people logged in to Facebook who have viewed your Page’s profile, broken down by each tab.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_views_by_internal_referer_logged_in_unique">page_views_by_internal_referer_logged_in_unique</h5>
+<p>The number of people logged in to Facebook who have viewed your Page, broken down by the internal referer within Facebook.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_views_by_site_logged_in_unique">page_views_by_site_logged_in_unique</h5>
+<p>The number of people logged in to Facebook who have viewed your Page profile, broken down by the type of device.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_views_by_age_gender_logged_in_unique">page_views_by_age_gender_logged_in_unique</h5>
+<p>The number of people logged in to Facebook who have viewed your Page profile, broken down by gender group.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_views_by_referers_logged_in_unique">page_views_by_referers_logged_in_unique</h5>
+<p>Logged-in page visit counts (unique users) by referral source.<br>
+<em>day, week, days_28</em></p>
+<h3 id="page-video-views">Page Video Views</h3>
+<h5 id="page_video_views">page_video_views</h5>
+<p>Total number of times page’s videos have been viewed for more than 3 seconds.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_video_views_paid">page_video_views_paid</h5>
+<p>Total number of times page’s promoted videos have been viewed for more than 3 seconds.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_video_views_organic">page_video_views_organic</h5>
+<p>Total number of times page’s videos have been viewed for more than 3 seconds by organic reach.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_video_views_by_paid_non_paid">page_video_views_by_paid_non_paid</h5>
+<p>Total number of times page’s videos have been viewed for more than 3 seconds, broken down by total, paid and non-paid.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_video_views_autoplayed">page_video_views_autoplayed</h5>
+<p>Total number of times page’s autoplayed videos have been viewed for more than 3 seconds.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_video_views_click_to_play">page_video_views_click_to_play</h5>
+<p>Total number of times page’s videos have been viewed after the user clicks on play for more than 3 seconds.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_video_views_unique">page_video_views_unique</h5>
+<p>Total number of times page’s videos have been played for unique people for more than 3 seconds.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_video_repeat_views">page_video_repeat_views</h5>
+<p>Total number of times that people replay a page’s videos for more than 3 seconds.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_video_complete_views_30s">page_video_complete_views_30s</h5>
+<p>Total number of times page’s videos have been viewed for more than 30 seconds.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_video_complete_views_30s_paid">page_video_complete_views_30s_paid</h5>
+<p>Total number of times page’s promoted videos have been viewed to the end, or for more than 30 seconds.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_video_complete_views_30s_organic">page_video_complete_views_30s_organic</h5>
+<p>Total number of times page’s videos have been viewed to the end, or viewed for more than 30 seconds by organic reach.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_video_complete_views_30s_autoplayed">page_video_complete_views_30s_autoplayed</h5>
+<p>Total number of times page’s autoplayed videos have been viewed to the end, or viewed for more than 30 seconds.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_video_complete_views_30s_click_to_play">page_video_complete_views_30s_click_to_play</h5>
+<p>Total number of times page’s videos have been viewed to the end, or viewed after the user clicks on play for more than 30 seconds.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_video_complete_views_30s_unique">page_video_complete_views_30s_unique</h5>
+<p>Total number of times page’s videos have been played for unique people to the end, or viewed for more than 30 seconds.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_video_complete_views_30s_repeat_views">page_video_complete_views_30s_repeat_views</h5>
+<p>Total number of times that people replay a page’s videos to the end, or for more than 30 seconds.<br>
+<em>day, week, days_28</em></p>
+<h5 id="post_video_complete_views_30s_autoplayed">post_video_complete_views_30s_autoplayed</h5>
+<p>Number of times your video started automatically playing and people viewed it for 30 seconds or to the end, whichever came first. Returns 0 for reshared videos.<br>
+<em>lifetime</em></p>
+<h5 id="post_video_complete_views_30s_clicked_to_play">post_video_complete_views_30s_clicked_to_play</h5>
+<p>Number of times people clicked to play your video and viewed it for 30 seconds or to the end, whichever came first. Returns 0 for reshared videos.<br>
+<em>lifetime</em></p>
+<h5 id="post_video_complete_views_30s_organic">post_video_complete_views_30s_organic</h5>
+<p>Number of times your video was viewed for 30 seconds or viewed to the end, whichever came first, without a paid promotion. Returns 0 for reshared videos.<br>
+<em>lifetime</em></p>
+<h5 id="post_video_complete_views_30s_paid">post_video_complete_views_30s_paid</h5>
+<p>Number of times your video was viewed for 30 seconds or viewed to the end, whichever came first, after a paid promotion. Returns 0 for reshared videos.<br>
+<em>lifetime</em></p>
+<h5 id="post_video_complete_views_30s_unique">post_video_complete_views_30s_unique</h5>
+<p>Total number of times page’s videos have been viewed for more than 30 seconds by unique users. Returns 0 for reshared videos.<br>
+<em>lifetime</em></p>
+<h5 id="page_video_views_10s">page_video_views_10s</h5>
+<p>The number of times your Page’s videos were watched for an aggregate of at least 10 seconds, or for nearly its total length, whichever happened first.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_video_views_10s_paid">page_video_views_10s_paid</h5>
+<p>The number of times your Page’s videos with paid activity were watched for at least a total of 10 seconds, or for nearly their total length, whichever happened first.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_video_views_10s_organic">page_video_views_10s_organic</h5>
+<p>The number of times your Page’s videos were watched without any paid distribution for at least a total of 10 seconds, or for nearly their total length, whichever happened first.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_video_views_10s_autoplayed">page_video_views_10s_autoplayed</h5>
+<p>The number of times your Page’s videos were started automatically and watched for at least a total of 10 seconds, or for nearly their total length, whichever happened first.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_video_views_10s_click_to_play">page_video_views_10s_click_to_play</h5>
+<p>The number of times your Page’s videos were started by clicking the play button and watched for at least a total of 10 seconds, or for nearly their total length, whichever happened first.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_video_views_10s_unique">page_video_views_10s_unique</h5>
+<p>The number of times your Page’s videos were watched for an aggregate of at least 10 seconds, or for nearly its total length, whichever happened first, by unique users.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_video_views_10s_repeat">page_video_views_10s_repeat</h5>
+<p>The number of times your Page’s videos were replayed for at least 10 seconds, or for nearly its total length, whichever happened first.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_video_view_time">page_video_view_time</h5>
+<p>The total amount of time (in milliseconds) people spent watching videos on your Page.<br>
+<em>day</em></p>
+<h3 id="page-posts">Page Posts</h3>
+<h5 id="page_posts_impressions">page_posts_impressions*</h5>
+<p>The number of times your Page’s posts entered a person’s screen. Posts include statuses, photos, links, videos and more.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_posts_impressions_unique">page_posts_impressions_unique*</h5>
+<p>The number of people who had any of your Page’s posts enter their screen. Posts include statuses, photos, links, videos and more.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_posts_impressions_paid">page_posts_impressions_paid*</h5>
+<p>The number of times your Page’s posts entered a person’s screen through paid distribution such as an ad.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_posts_impressions_paid_unique">page_posts_impressions_paid_unique*</h5>
+<p>The number of people who had any of your Page’s posts enter their screen through paid distribution such as an ad.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_posts_impressions_organic">page_posts_impressions_organic*</h5>
+<p>The number of times your Page’s posts entered a person’s screen through unpaid distribution.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_posts_impressions_organic_unique">page_posts_impressions_organic_unique*</h5>
+<p>The number of people who had any of your Page’s posts enter their screen through unpaid distribution.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_posts_served_impressions_organic_unique">page_posts_served_impressions_organic_unique</h5>
+<p>The number of people who were served your Page’s posts in their News Feed whether it entered their screen or not. Posts include statuses, photos, links, videos and more.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_posts_impressions_viral">page_posts_impressions_viral*</h5>
+<p>The number of times your Page’s posts entered a person’s screen with social information attached. Social information displays when a person’s friend interacted with you Page or post. This includes when someone’s friend likes or follows your Page, engages with a post, shares a photo of your Page and checks into your Page.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_posts_impressions_viral_unique">page_posts_impressions_viral_unique*</h5>
+<p>The number of people who had any of your Page’s posts enter their screen with social information attached. As a form of organic distribution, social information displays when a person’s friend interacted with you Page or post. This includes when someone’s friend likes or follows your Page, engages with a post, shares a photo of your Page and checks into your Page.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_posts_impressions_nonviral">page_posts_impressions_nonviral*</h5>
+<p>The number of times your Page’s posts entered a person’s screen. This does not include content created about your Page with social information attached. Social information displays when a person’s friend interacted with you Page or post. This includes when someone’s friend likes or follows your Page, engages with a post, shares a photo of your Page and checks into your Page.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_posts_impressions_nonviral_unique">page_posts_impressions_nonviral_unique*</h5>
+<p>The number of people who had any posts by your Page enter their screen. This does not include content created about your Page with social information attached. As a form of organic distribution, social information displays when a person’s friend interacted with you Page or post. This includes when someone’s friend likes or follows your Page, engages with a post, shares a photo of your Page and checks into your Page.<br>
+<em>day, week, days_28</em></p>
+<h5 id="page_posts_impressions_frequency_distribution">page_posts_impressions_frequency_distribution</h5>
+<p>The number of people who saw your Page posts, broken down by how many times people saw your posts.<br>
+<em>day, week, days_28</em></p>
+<h2 id="single-post-stats">Single Post Stats</h2>
+<h3 id="page-post-impressions">Page Post Impressions</h3>
+<p>Note that the unique impression insights values are calculated independently. Total page reach may not always be exactly equal to the sum of paid and non-paid unique values.</p>
+<h5 id="post_impressions">post_impressions*</h5>
+<p>The number of times your Page’s post entered a person’s screen. Posts include statuses, photos, links, videos and more.<br>
+<em>lifetime</em></p>
+<h5 id="post_impressions_unique">post_impressions_unique*</h5>
+<p>The number of people who had your Page’s post enter their screen. Posts include statuses, photos, links, videos and more.<br>
+<em>lifetime</em></p>
+<h5 id="post_impressions_paid">post_impressions_paid*</h5>
+<p>The number of times your Page’s post entered a person’s screen through paid distribution such as an ad.<br>
+<em>lifetime</em></p>
+<h5 id="post_impressions_paid_unique">post_impressions_paid_unique*</h5>
+<p>The number of people who had your Page’s post enter their screen through paid distribution such as an ad.<br>
+<em>lifetime</em></p>
+<h5 id="post_impressions_fan">post_impressions_fan*</h5>
+<p>The number of impressions for your Page post by people who have liked your Page.<br>
+<em>lifetime</em></p>
+<h5 id="post_impressions_fan_unique">post_impressions_fan_unique*</h5>
+<p>The number of people who have like your Page who saw your Page post.<br>
+<em>lifetime</em></p>
+<h5 id="post_impressions_fan_paid">post_impressions_fan_paid*</h5>
+<p>The number of impressions for your Page post by people who like your Page in an Ad or Sponsored Story.<br>
+<em>lifetime</em></p>
+<h5 id="post_impressions_fan_paid_unique">post_impressions_fan_paid_unique*</h5>
+<p>The number of people who have like your Page and saw your Page post in an Ad or Sponsored Story.<br>
+<em>lifetime</em></p>
+<h5 id="post_impressions_organic">post_impressions_organic*</h5>
+<p>The number of times your Page’s posts entered a person’s screen through unpaid distribution.<br>
+<em>lifetime</em></p>
+<h5 id="post_impressions_organic_unique">post_impressions_organic_unique*</h5>
+<p>The number of people who had your Page’s post enter their screen through unpaid distribution.<br>
+<em>lifetime</em></p>
+<h5 id="post_impressions_viral">post_impressions_viral*</h5>
+<p>The number of times your Page’s post entered a person’s screen with social information attached. Social information displays when a person’s friend interacted with you Page or post. This includes when someone’s friend likes or follows your Page, engages with a post, shares a photo of your Page and checks into your Page.<br>
+<em>lifetime</em></p>
+<h5 id="post_impressions_viral_unique">post_impressions_viral_unique*</h5>
+<p>The number of people who had your Page’s post enter their screen with social information attached. As a form of organic distribution, social information displays when a person’s friend interacted with you Page or post. This includes when someone’s friend likes or follows your Page, engages with a post, shares a photo of your Page and checks into your Page.<br>
+<em>lifetime</em></p>
+<h5 id="post_impressions_nonviral">post_impressions_nonviral*</h5>
+<p>The number of times your Page’s post entered a person’s screen. This does not include content created about your Page with social information attached. Social information displays when a person’s friend interacted with you Page or post. This includes when someone’s friend likes or follows your Page, engages with a post, shares a photo of your Page and checks into your Page.<br>
+<em>lifetime</em></p>
+<h5 id="post_impressions_nonviral_unique">post_impressions_nonviral_unique*</h5>
+<p>The number of people who had your Page’s post enter their screen. This does not include content created about your Page with social information attached. As a form of organic distribution, social information displays when a person’s friend interacted with you Page or post. This includes when someone’s friend likes or follows your Page, engages with a post, shares a photo of your Page and checks into your Page.<br>
+<em>lifetime</em></p>
+<h5 id="post_impressions_by_story_type">post_impressions_by_story_type*</h5>
+<p>The number of times this post was seen via a story published by a friend of the person viewing the post.<br>
+<em>lifetime</em></p>
+<h5 id="post_impressions_by_story_type_unique">post_impressions_by_story_type_unique*</h5>
+<p>The number of people who saw your page post in a story from a friend, by story type.<br>
+<em>lifetime</em></p>
+<h3 id="page-post-engagement">Page Post Engagement</h3>
+<h5 id="post_engaged_users">post_engaged_users*</h5>
+<p>The number of people who clicked anywhere in your posts.<br>
+<em>lifetime</em></p>
+<h5 id="post_negative_feedback">post_negative_feedback*</h5>
+<p>The number of times people took a negative action in your post (e.g. hid it).<br>
+*lifetime</p>
+<h5 id="post_negative_feedback_unique">post_negative_feedback_unique*</h5>
+<p>The number of people who took a negative action in your post (e.g., hid it).<br>
+<em>lifetime</em></p>
+<h5 id="post_negative_feedback_by_type">post_negative_feedback_by_type*</h5>
+<p>The number of times people took a negative action in your post broken down by type.<br>
+<em>lifetime</em></p>
+<h5 id="post_negative_feedback_by_type_unique">post_negative_feedback_by_type_unique*</h5>
+<p>The number of people who took a negative action in your post broken down by type.<br>
+<em>lifetime</em></p>
+<h5 id="post_engaged_fan">post_engaged_fan</h5>
+<p>People who have liked your page and engaged with your post.<br>
+<em>lifetime</em></p>
+<h5 id="post_clicks">post_clicks*</h5>
+<p>The number of times people clicked on anywhere in your posts without generating a story.<br>
+<em>lifetime</em></p>
+<h5 id="post_clicks_unique">post_clicks_unique*</h5>
+<p>The number of people who clicked anywhere in your post without generating a story.<br>
+<em>lifetime</em></p>
+<h5 id="post_clicks_by_type">post_clicks_by_type*</h5>
+<p>The number of times people clicked on anywhere in your posts without generating a story, by consumption type.<br>
+<em>lifetime</em></p>
+<h5 id="post_clicks_by_type_unique">post_clicks_by_type_unique*</h5>
+<p>The number of people who clicked anywhere in your post without generating a story, by consumption type.<br>
+<em>lifetime</em></p>
+<h3 id="page-post-reactions">Page Post Reactions</h3>
+<h5 id="post_reactions_like_total">post_reactions_like_total</h5>
+<p>Total “like” reactions of a post.<br>
+<em>lifetime</em></p>
+<h5 id="post_reactions_love_total">post_reactions_love_total</h5>
+<p>Total “love” reactions of a post.<br>
+<em>lifetime</em></p>
+<h5 id="post_reactions_wow_total">post_reactions_wow_total</h5>
+<p>Total “wow” reactions of a post.<br>
+<em>lifetime</em></p>
+<h5 id="post_reactions_haha_total">post_reactions_haha_total</h5>
+<p>Total “haha” reactions of a post.<br>
+<em>lifetime</em></p>
+<h5 id="post_reactions_sorry_total">post_reactions_sorry_total</h5>
+<p>Total “sorry” reactions of a post.<br>
+<em>lifetime</em></p>
+<h5 id="post_reactions_anger_total">post_reactions_anger_total</h5>
+<p>Total “anger” reactions of a post.<br>
+<em>lifetime</em></p>
+<h5 id="post_reactions_by_type_total">post_reactions_by_type_total</h5>
+<p>Total post reactions by type.<br>
+<em>lifetime</em></p>
+<h3 id="page-video-posts">Page Video Posts</h3>
+<h5 id="post_video_avg_time_watched">post_video_avg_time_watched</h5>
+<p>The average length of time (in milliseconds) people spent viewing your video. Only available for videos created after August 25th 2016. Returns 0 for reshared videos.<br>
+<em>lifetime</em></p>
+<h5 id="post_video_complete_views_organic">post_video_complete_views_organic</h5>
+<p>The number of times your video was organically viewed from the beginning to 95% of its length. Returns 0 for reshared videos.<br>
+<em>lifetime</em></p>
+<h5 id="post_video_complete_views_organic_unique">post_video_complete_views_organic_unique</h5>
+<p>The number of people who viewed your video organically from the beginning to 95% of its length. Returns 0 for reshared videos.<br>
+<em>lifetime</em></p>
+<h5 id="post_video_complete_views_paid">post_video_complete_views_paid</h5>
+<p>The number of times your video was viewed via paid impression from the beginning to 95% of its length. Returns 0 for reshared videos.<br>
+<em>lifetime</em></p>
+<h5 id="post_video_complete_views_paid_unique">post_video_complete_views_paid_unique</h5>
+<p>The number of people who viewed your video via paid impression from the beginning to 95% of its length. Returns 0 for reshared videos.<br>
+<em>lifetime</em></p>
+<h5 id="post_video_retention_graph">post_video_retention_graph*</h5>
+<p>Views of your video at each interval as a percentage of all views. This metric does not count views of videos while they were live. Retention graphs may show more viewers later in the video than at the beginning. People might start the video in the middle, skip ahead, save and rewatch it from that point, or other similar behaviors.<br>
+<em>lifetime</em></p>
+<h5 id="post_video_retention_graph_clicked_to_play">post_video_retention_graph_clicked_to_play</h5>
+<p>Clicked-to-play views of your video at each interval as a percentage of all clicked-to-play views. This metric does not count views of videos while they were live. Retention graphs may show more viewers later in the video than at the beginning. People might start the video in the middle, skip ahead, save and rewatch it from that point, or other similar behaviors.<br>
+<em>lifetime</em></p>
+<h5 id="post_video_retention_graph_autoplayed">post_video_retention_graph_autoplayed</h5>
+<p>Auto-played views of your video at each interval as a percentage of all auto-played views. This metric does not count views of videos while they were live. Retention graphs may show more viewers later in the video than at the beginning. People might start the video in the middle, skip ahead, save and rewatch it from that point, or other similar behaviors.<br>
+<em>lifetime</em></p>
+<h5 id="post_video_views_organic">post_video_views_organic</h5>
+<p>The number of times your video was organically viewed for 3 seconds or more.<br>
+<em>lifetime</em></p>
+<h5 id="post_video_views_organic_unique">post_video_views_organic_unique</h5>
+<p>The number of people who viewed at least 3 seconds of your video organically.<br>
+<em>lifetime</em></p>
+<h5 id="post_video_views_paid">post_video_views_paid</h5>
+<p>The number of times your video was viewed via paid impression for 3 seconds or more.<br>
+<em>day, lifetime</em></p>
+<h5 id="post_video_views_paid_unique">post_video_views_paid_unique</h5>
+<p>The number of people who viewed at least 3 seconds of your video via paid impression.<br>
+<em>lifetime</em></p>
+<h5 id="post_video_length">post_video_length</h5>
+<p>Length of a video post (in milliseconds).<br>
+<em>lifetime</em></p>
+<h5 id="post_video_views">post_video_views</h5>
+<p>The number of times your video was watched for an aggregate of at least 3 seconds, or for nearly its total length, whichever happened first.<br>
+<em>day, lifetime</em></p>
+<h5 id="post_video_views_unique">post_video_views_unique</h5>
+<p>The number of distinct people who viewed your video at least once.<br>
+<em>lifetime</em></p>
+<h5 id="post_video_views_autoplayed">post_video_views_autoplayed</h5>
+<p>Number of times your video started automatically playing and people viewed it for more than 3 seconds.<br>
+<em>lifetime</em></p>
+<h5 id="post_video_views_clicked_to_play">post_video_views_clicked_to_play</h5>
+<p>Number of times people clicked to play your video and viewed it more than 3 seconds.<br>
+<em>lifetime</em></p>
+<h5 id="post_video_views_10s">post_video_views_10s</h5>
+<p>The number of times your video was watched for an aggregate of at least 10 seconds, or for nearly its total length, whichever happened first. Returns 0 for reshared videos.<br>
+<em>lifetime</em></p>
+<h5 id="post_video_views_10s_unique">post_video_views_10s_unique</h5>
+<p>Number of unique viewers who watched your video for 10 seconds or to the end, whichever happened first. Returns 0 for reshared videos.<br>
+<em>lifetime</em></p>
+<h5 id="post_video_views_10s_autoplayed">post_video_views_10s_autoplayed</h5>
+<p>Number of times your video started playing automatically and people viewed it for 10 seconds or to the end, whichever happened first. Returns 0 for reshared videos.<br>
+<em>lifetime</em></p>
+<h5 id="post_video_views_10s_clicked_to_play">post_video_views_10s_clicked_to_play</h5>
+<p>Number of times people clicked to play your video and viewed it for 10 seconds or to the end, whichever happened first. Returns 0 for reshared videos.<br>
+<em>lifetime</em></p>
+<h5 id="post_video_views_10s_organic">post_video_views_10s_organic</h5>
+<p>Number of times your video was viewed with sound on for 10 seconds or viewed to the end, whichever happened first. Returns 0 for reshared videos.<br>
+<em>lifetime</em></p>
+<h5 id="post_video_views_sound_on">post_video_views_sound_on</h5>
+<p>Number of times your video was viewed with sound on for 3 seconds or viewed to the end, whichever happened first.<br>
+<em>lifetime</em></p>
+<h5 id="post_video_view_time">post_video_view_time</h5>
+<p>The total number of milliseconds your video was watched, including replays and views less than 3 seconds. Returns 0 for reshared videos.<br>
+<em>day, lifetime</em></p>
+<h5 id="post_video_view_time_organic">post_video_view_time_organic</h5>
+<p>Total time (in milliseconds) video has been viewed without paid promotion. Returns 0 for reshared videos.<br>
+<em>day, lifetime</em></p>
+<h5 id="post_video_view_time_by_age_bucket_and_gender">post_video_view_time_by_age_bucket_and_gender</h5>
+<p>Total time (in milliseconds) video has been viewed by Top Audiences.<br>
+<em>lifetime</em></p>
+<h5 id="post_video_view_time_by_region_id">post_video_view_time_by_region_id</h5>
+<p>Total time (in milliseconds) video has been viewed by Top 45 Locations (Region ##### Country).<br>
+<em>lifetime</em></p>
+<h5 id="post_video_views_by_distribution_type">post_video_views_by_distribution_type</h5>
+<p>Number of times your video was viewed by distribution type (page_owned and shared).<br>
+<em>lifetime</em></p>
+<h5 id="post_video_view_time_by_distribution_type">post_video_view_time_by_distribution_type</h5>
+<p>Total time (in milliseconds) video has been viewed by distribution type (page_owned and shared).<br>
+<em>lifetime</em></p>
+<h5 id="post_video_view_time_by_country_id">post_video_view_time_by_country_id</h5>
+<p>Total time (in minutes) video has been viewed by Top 45 Locations (Country).<br>
+<em>lifetime</em></p>
+<h3 id="video-ad-breaks">Video Ad Breaks</h3>
+<h5 id="page_daily_video_ad_break_ad_impressions_by_crosspost_status">page_daily_video_ad_break_ad_impressions_by_crosspost_status</h5>
+<p>Number of times an ad was shown during ad breaks in a crossposted video.<br>
+<em>day</em></p>
+<h5 id="page_daily_video_ad_break_cpm_by_crosspost_status">page_daily_video_ad_break_cpm_by_crosspost_status</h5>
+<p>Average amount paid by advertisers for 1,000 impressions of their ads in a crossposted video. This is a gross number and includes the amount paid to Facebook.<br>
+<em>day</em></p>
+<h5 id="page_daily_video_ad_break_earnings_by_crosspost_status">page_daily_video_ad_break_earnings_by_crosspost_status</h5>
+<p>An estimate of the amount you earned from ad breaks in a crossposted video, based on the number of impressions and CPM of ads shown. Actual payments may differ if there are content ownership claims or other adjustments.<br>
+<em>day</em></p>
+<h5 id="post_video_ad_break_ad_impressions">post_video_ad_break_ad_impressions</h5>
+<p>Number of times an ad was shown during ad breaks in the video attached to the post.<br>
+<em>day, lifetime</em></p>
+<h5 id="post_video_ad_break_earnings">post_video_ad_break_earnings</h5>
+<p>An estimate of the amount you earned from ad breaks in the video attached to the post, based on the number of impressions and CPM of ads shown. Actual payments may differ if there are content ownership claims or other adjustments.<br>
+<em>day, lifetime</em></p>
+<h5 id="post_video_ad_break_ad_cpm">post_video_ad_break_ad_cpm</h5>
+<p>Average amount paid by advertisers for 1,000 impressions of their ads in the video attached to the post. This number also includes the amount paid to Facebook<br>
+<em>day, lifetime</em></p>
+</div>
+</body>
+
+</html>
